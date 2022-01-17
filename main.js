@@ -1,6 +1,7 @@
 const btn = document.querySelector('#button');
 let computerScore = document.querySelector('#cscore');
 let playerScore = document.querySelector('#pscore');
+const resetBtn = document.querySelector('#resetButton');
 
 function computerPlay() {
     min = Math.ceil(1)
@@ -73,3 +74,7 @@ btn.addEventListener('click', () => {
     console.log(gameRound(computerSelection, playerSelection));
 });
 
+resetBtn.addEventListener('click', () => {
+    computerScore.innerText = 0;
+    playerScore.innerText = 0;
+});
