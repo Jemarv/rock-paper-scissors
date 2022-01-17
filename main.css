@@ -44,7 +44,7 @@ div {
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 70% }
+    to { width: 55% }
   }
 
 @keyframes blink-caret {
