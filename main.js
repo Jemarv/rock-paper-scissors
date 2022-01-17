@@ -36,25 +36,25 @@ function gameRound(computerSelection, playerSelection) {
         computerSelection = computerPlay();
     
         if (computerSelection === playerSelection) {
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so there was a tie! Go again.`);
+            p.textContent = 'Tie';
         } else if (computerSelection === 'rock' && playerSelection === 'paper') {
             playerScore.innerText++;
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so you win!`);
+            p.textContent = 'Player +1';
         } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
             computerScore.innerText++;
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so the Computer wins!`);
+            p.textContent = 'Computer +1';
         } else if (computerSelection === 'paper' && playerSelection === 'rock') {
             computerScore.innerText++;
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so the Computer wins!`);
+            p.textContent = 'Computer +1';
         } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
             playerScore.innerText++;
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so you win!`);
+            p.textContent = 'Player +1';
         } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
             playerScore.innerText++;
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so you win!`);
+            p.textContent = 'Player +1';
         } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
             computerScore.innerText++;
-            console.log(`The Computer chose ${computerSelection}, and you chose ${playerSelection} so the Computer wins!`);
+            p.textContent = 'Computer +1';
         }
     } 
 }

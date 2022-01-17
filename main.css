@@ -40,3 +40,13 @@ div {
     margin-top: 0px;
     margin-bottom: 25px;
 }
+
+footer {
+    margin-top: 75%;
+}
+
+button:hover {
+    background:rgba(255, 255, 255, 0.26);
+    transition: all 300ms ease;
+}
+
