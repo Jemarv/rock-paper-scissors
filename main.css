@@ -38,6 +38,10 @@ div {
     gap: 0px;
 }
 
+#message h1 {
+    font-size: 40px;
+}
+
 @keyframes typing {
     from { width: 0 }
     to { width: 70% }
