@@ -28,35 +28,37 @@ computerScore.innerText = 0;
 playerScore.innerText = 0;
 
 function gameRound(computerSelection, playerSelection) {
-    if (computerScore.innerText == 5) {
-        p.textContent = 'The Computer wins..';
-    } else if (playerScore.innerText == 5) {
-        p.textContent = 'You win!';
-    } else {
-        computerSelection = computerPlay();
     
-        if (computerSelection === playerSelection) {
-            p.textContent = 'Tie';
-        } else if (computerSelection === 'rock' && playerSelection === 'paper') {
-            playerScore.innerText++;
-            p.textContent = 'Player +1';
-        } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
-            computerScore.innerText++;
-            p.textContent = 'Computer +1';
-        } else if (computerSelection === 'paper' && playerSelection === 'rock') {
-            computerScore.innerText++;
-            p.textContent = 'Computer +1';
-        } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
-            playerScore.innerText++;
-            p.textContent = 'Player +1';
-        } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
-            playerScore.innerText++;
-            p.textContent = 'Player +1';
-        } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
-            computerScore.innerText++;
-            p.textContent = 'Computer +1';
-        }
-    } 
+    computerSelection = computerPlay();
+
+    if (computerSelection === playerSelection) {
+        p.textContent = 'Tie';
+    } else if (computerSelection === 'rock' && playerSelection === 'paper') {
+        playerScore.innerText++;
+        p.textContent = 'Player +1';
+    } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
+        computerScore.innerText++;
+        p.textContent = 'Computer +1';
+    } else if (computerSelection === 'paper' && playerSelection === 'rock') {
+        computerScore.innerText++;
+        p.textContent = 'Computer +1';
+    } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
+        playerScore.innerText++;
+        p.textContent = 'Player +1';
+    } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
+        playerScore.innerText++;
+        p.textContent = 'Player +1';
+    } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
+        computerScore.innerText++;
+        p.textContent = 'Computer +1';
+    }
+
+    if (computerScore.innerText > 4) {
+        p.textContent = 'The Computer wins..';
+    } else if (playerScore.innerText > 4) {
+        p.textContent = 'You win!';
+    }
+
 }
 
 rockBtn.addEventListener('click', () => {
@@ -71,7 +73,7 @@ scissorsBtn.addEventListener('click', () => {
     gameRound(computerSelection, 'scissors');
 });
 
-restart.addEventListener('click', () => {
+restart.addEventListener('click', (e) => {
     computerScore.innerText = 0;
     playerScore.innerText = 0;
     p.textContent = 'Best of 5, select your weapon.';

@@ -45,7 +45,7 @@ div {
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: grey; }
+  50% { border-color: orange; }
 }
 
 #message p {
@@ -56,7 +56,7 @@ div {
     border-right: 2px solid rgba(255, 255, 255, 0.26);
     animation: 
         typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+        blink-caret 0.75s step-end 7;
 }
 
 footer {
@@ -66,5 +66,9 @@ footer {
 button:hover {
     background:rgba(255, 255, 255, 0.26);
     transition: all 300ms ease;
+}
+
+button:active {
+    transform: scale(0.90);
 }
 
