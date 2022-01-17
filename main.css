@@ -1,0 +1,21 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: auto;
+}
+
+button {
+    width: 200px;
+    height: 25px;
+}
