@@ -15,7 +15,27 @@ div {
     width: auto;
 }
 
-button {
-    width: 200px;
+#rock, #paper, #scissors {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#restart {
+    width: 100px;
     height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#message {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#message p {
+    margin-top: 0px;
+    margin-bottom: 25px;
 }

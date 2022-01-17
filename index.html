@@ -11,12 +11,23 @@
     <title>Rock, Paper, Scissors!</title>
 </head>
 <body>
-    <button id='button'>Start round!</button>
-    <div>
+    <div id='message'>
+        <h1>Rock, paper, scissors!</h1>
+        <p>Best of 5, select your weapon.</p>
+    </div>
+
+    <div id='buttons'>
+        <button id='rock'>Rock</button>
+        <button id='paper'>Paper</button>
+        <button id='scissors'>Scissors</button>
+    </div>
+
+    <div id='scores'>
         <h3>Computer: <span id='cscore'>0</span></h3>
         <h3>Player: <span id='pscore'>0</span></h3>
     </div>
-    <button id='resetButton'>Restart</button>
+
+    <button id='restart'>Restart</button>
     <script src="main.js"></script>
 </body>
 </html>
